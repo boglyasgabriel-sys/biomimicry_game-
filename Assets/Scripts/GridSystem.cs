@@ -24,7 +24,7 @@ public class GridSystem : MonoBehaviour
         return new Vector3(x * cellSize + cellSize / 2f, 0, z * cellSize + cellSize / 2f);
     }
 
-    // Dessine la grille dans la vue Scene pour t'aider à visualiser les limites
+    // Dessine la grille dans la vue Scene pour aider à visualiser les limites
     private void OnDrawGizmos()
     {
         Gizmos.color = gridColor;
