@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 6b6458ba01832ba4b826a0569be1c03a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - introCanvasGroup: {instanceID: 0}
+  - introImage: {instanceID: 0}
+  - introSprite: {fileID: -3044834177801679632, guid: 0fe23bd44d37b3a42a2e251d108e84dc, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
