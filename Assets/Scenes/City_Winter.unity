@@ -78517,7 +78517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroController
   introCanvasGroup: {fileID: 1748898058}
   introImage: {fileID: 91119410}
-  introSprite: {fileID: -3044834177801679632, guid: 0fe23bd44d37b3a42a2e251d108e84dc, type: 3}
+  introSprite: {fileID: 2646476766586103644, guid: 47fed804be8ede1428310b3013efd368, type: 3}
   displayDuration: 2
   fadeDuration: 0.5
 --- !u!1001 &1748949046
