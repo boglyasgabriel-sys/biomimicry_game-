@@ -12,7 +12,7 @@ public class QuestionData
     public string questionText;
     public string[] options;
     public int correctAnswerIndex;
-    public Sprite questionIllustration; // Image spécifique au parchemin
+    public Sprite questionIllustration;
 }
 
 public class QuizManager : MonoBehaviour
@@ -23,10 +23,13 @@ public class QuizManager : MonoBehaviour
     public TextMeshProUGUI questionText;
     public Button[] optionButtons;
     public TextMeshProUGUI[] optionTexts;
-    public Image questionImage; // Cadre d'illustration sur le parchemin
+    public Image questionImage;
 
     [Header("Panneau Quizz")]
     public GameObject quizWindow;
+
+    [Header("Gestionnaire de remplacement du Train")]
+    public TrainReplacer trainReplacer; // Glisser le script ou l'objet TrainReplacer ici
 
     [Header("Banque de Questions")]
     public List<QuestionData> questionsList = new List<QuestionData>();
@@ -34,6 +37,7 @@ public class QuizManager : MonoBehaviour
     private Dictionary<string, QuestionData> questionsDictionary = new Dictionary<string, QuestionData>();
     private int correctAnswerIndex;
     private QuizTrigger currentTrigger;
+    private string currentQuestionID;
 
     void Awake()
     {
@@ -49,75 +53,88 @@ public class QuizManager : MonoBehaviour
         InitializeQuestions();
     }
 
-    void Start()
+    IEnumerator Start()
     {
-        // Masque le Canvas au lancement du jeu
         if (quizWindow != null)
         {
             quizWindow.SetActive(false);
         }
+
+        // Attend la fin de la frame pour s'assurer que tous les scripts de la scène ont exécuté leur Awake/Start
+        yield return null;
+
+        CheckCompletedTriggersInScene();
     }
 
     /// <summary>
-    /// Remplit le dictionnaire avec toutes les questions configurées
+    /// Parcourt la scène au lancement et applique l'état sauvegardé dans le GameManager
     /// </summary>
+    void CheckCompletedTriggersInScene()
+    {
+        QuizTrigger[] triggers = FindObjectsByType<QuizTrigger>(FindObjectsSortMode.None);
+        foreach (QuizTrigger trigger in triggers)
+        {
+            string id = string.IsNullOrEmpty(trigger.customQuestionID) ? trigger.gameObject.name : trigger.customQuestionID;
+
+            if (GameManager.Instance != null && GameManager.Instance.IsQuizCompleted(id))
+            {
+                if (id == "TrainNoise" && trainReplacer != null)
+                {
+                    trainReplacer.ReplaceTrainModel();
+                }
+
+                trigger.gameObject.SetActive(false);
+            }
+        }
+    }
+
     void InitializeQuestions()
     {
-        // 1. Train Noise (hiver)
         AddQuestion("TrainNoise", 
             "How can we reduce train noise during winter?", 
             new string[] { "Kingfisher beak shape", "Wall moss with lichens", "Infrasound like elephants" }, 
             0);
 
-        // 2. Urban Heat (été)
         AddQuestion("UrbanHeat", 
             "How can urban heat issues be solved in summer?", 
             new string[] { "Shark skin micro-grooves", "Termite mound construction", "Sand fox burrows" }, 
             1);
 
-        // 3. Flooding (hiver)
         AddQuestion("Flooding", 
             "What biomimetic solution can prevent winter flooding?", 
             new string[] { "Mole gallery", "Lotus leaf / reptile skin", "Elevated roads" }, 
             1);
 
-        // 4. Glare / Reflection (été)
         AddQuestion("Glare", 
             "How can we prevent glare and reflections in summer?", 
             new string[] { "Moth eye structure", "Chameleon skin", "Fish scales" }, 
             0);
 
-        // 5. Traffic Jams (hiver)
         AddQuestion("TrafficJams", 
             "How can traffic congestion be optimized in winter?", 
             new string[] { "Honeybee dance", "Beaver damming", "Slime mold / ant algorithm" }, 
             2);
 
-        // 6. Heat Loss (hiver)
         AddQuestion("HeatLoss", 
             "What animal mechanism helps limit heat loss in winter?", 
             new string[] { "Peacock feathers", "Polar bear fur", "Hedgehog spines" }, 
             1);
 
-        // 7. Window Bird Strikes (été)
         AddQuestion("WindowStrikes", 
             "How can window facades prevent bird collisions in summer?", 
             new string[] { "Spider web pattern", "Raptor silhouettes", "Peacock tail pattern" }, 
             0);
 
-        // 8. Narrow Streets Ventilation (été)
         AddQuestion("Ventilation", 
             "How can we improve airflow in narrow streets during summer?", 
             new string[] { "Porous marine sponge", "Shell spiral model", "Beehive structure" }, 
             1);
 
-        // 9. Wildfires (été)
         AddQuestion("Wildfires", 
             "How can recurring wildfires be prevented in summer?", 
             new string[] { "Badger underbrush clearing", "Meerkat group vigilance", "Insect-inspired detectors" }, 
             2);
 
-        // 10. Adhesive (hiver)
         AddQuestion("Adhesive", 
             "What biological model inspires strong winter adhesives?", 
             new string[] { "Gecko feet", "Sequoia sap", "Leech suckers" }, 
@@ -140,20 +157,16 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Déclenche le quiz en fonction du nom de l'objet ou de l'ID passé
-    /// </summary>
     public void TriggerQuizByName(string questionID, QuizTrigger trigger)
     {
         if (questionsDictionary.TryGetValue(questionID, out QuestionData data))
         {
             currentTrigger = trigger;
+            currentQuestionID = questionID;
             correctAnswerIndex = data.correctAnswerIndex;
 
-            // Update du texte de la question
             questionText.text = data.questionText;
 
-            // Update de l'image (si configurée dans l'Inspector de la liste)
             QuestionData inspectorData = questionsList.Find(q => q.id == questionID);
             if (questionImage != null)
             {
@@ -168,7 +181,6 @@ public class QuizManager : MonoBehaviour
                 }
             }
 
-            // Update des textes et boutons d'options
             for (int i = 0; i < optionButtons.Length; i++)
             {
                 if (i < data.options.Length)
@@ -186,7 +198,6 @@ public class QuizManager : MonoBehaviour
                 }
             }
 
-            // Affichage du Canvas
             quizWindow.SetActive(true);
         }
         else
@@ -201,6 +212,16 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("Correct answer!");
             quizWindow.SetActive(false);
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.MarkQuizCompleted(currentQuestionID);
+            }
+
+            if (currentQuestionID == "TrainNoise" && trainReplacer != null)
+            {
+                trainReplacer.ReplaceTrainModel();
+            }
 
             if (currentTrigger != null)
             {

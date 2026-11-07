@@ -31,4 +31,18 @@ public class TrainFollowPath : MonoBehaviour
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; // Boucle infinie
         }
     }
+
+
+    // À rajouter à la fin de la classe TrainFollowPath :
+
+public int GetCurrentWaypointIndex()
+{
+    return currentWaypointIndex;
 }
+
+public void SetCurrentWaypointIndex(int index)
+{
+    currentWaypointIndex = index;
+}
+}
+

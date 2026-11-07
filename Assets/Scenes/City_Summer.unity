@@ -25525,6 +25525,63 @@ Transform:
   - {fileID: 1150195389}
   m_Father: {fileID: 514873249}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &424872728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3174074787888525815, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.70582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.12956
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693093210696433442, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d0e40245ba34ab42af91cce97bfc92f, type: 3}
 --- !u!1001 &426911857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26572,8 +26629,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.21864721, g: 0.22651508, b: 0.4037736, a: 0.64705884}
+    m_SelectedColor: {r: 0.18944106, g: 0.26430085, b: 0.6830188, a: 0.6313726}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -26618,7 +26675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.29896042, g: 0.43077058, b: 0.79622644, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -31609,7 +31666,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -63553,6 +63610,7 @@ MonoBehaviour:
   - {fileID: 1271315333}
   questionImage: {fileID: 0}
   quizWindow: {fileID: 1363212690}
+  trainReplacer: {fileID: 0}
   questionsList: []
 --- !u!1001 &1129796038
 PrefabInstance:
@@ -112099,8 +112157,9 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 364598909}
+  - {fileID: 424872728}
   - {fileID: 1664500422}
   - {fileID: 770238424}
   - {fileID: 904850878}
   - {fileID: 65927262}
-  - {fileID: 364598909}
