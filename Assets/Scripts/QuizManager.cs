@@ -29,7 +29,11 @@ public class QuizManager : MonoBehaviour
     public GameObject quizWindow;
 
     [Header("Gestionnaire de remplacement du Train")]
-    public TrainReplacer trainReplacer; // Glisser le script ou l'objet TrainReplacer ici
+    public TrainReplacer trainReplacer; 
+
+    
+    [Header("Gestionnaire de remplacement Flooding")]
+    public FloodingReplacer floodingReplacer;
 
     [Header("Banque de Questions")]
     public List<QuestionData> questionsList = new List<QuestionData>();
@@ -70,24 +74,27 @@ public class QuizManager : MonoBehaviour
     /// Parcourt la scène au lancement et applique l'état sauvegardé dans le GameManager
     /// </summary>
     void CheckCompletedTriggersInScene()
+{
+    QuizTrigger[] triggers = FindObjectsByType<QuizTrigger>(FindObjectsSortMode.None);
+    foreach (QuizTrigger trigger in triggers)
     {
-        QuizTrigger[] triggers = FindObjectsByType<QuizTrigger>(FindObjectsSortMode.None);
-        foreach (QuizTrigger trigger in triggers)
+        string id = string.IsNullOrEmpty(trigger.customQuestionID) ? trigger.gameObject.name : trigger.customQuestionID;
+
+        if (GameManager.Instance != null && GameManager.Instance.IsQuizCompleted(id))
         {
-            string id = string.IsNullOrEmpty(trigger.customQuestionID) ? trigger.gameObject.name : trigger.customQuestionID;
-
-            if (GameManager.Instance != null && GameManager.Instance.IsQuizCompleted(id))
+            if (id == "TrainNoise" && trainReplacer != null)
             {
-                if (id == "TrainNoise" && trainReplacer != null)
-                {
-                    trainReplacer.ReplaceTrainModel();
-                }
-
-                trigger.gameObject.SetActive(false);
+                trainReplacer.ReplaceTrainModel();
             }
+            else if (id == "Flooding" && floodingReplacer != null)
+            {
+                floodingReplacer.ReplaceFloodingEnvironment();
+            }
+
+            trigger.gameObject.SetActive(false);
         }
     }
-
+}
     void InitializeQuestions()
     {
         AddQuestion("TrainNoise", 
@@ -206,31 +213,36 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    void OnOptionSelected(int selectedIndex)
+// 3. Dans OnOptionSelected(int selectedIndex) :
+void OnOptionSelected(int selectedIndex)
+{
+    if (selectedIndex == correctAnswerIndex)
     {
-        if (selectedIndex == correctAnswerIndex)
+        Debug.Log("Correct answer!");
+        quizWindow.SetActive(false);
+
+        if (GameManager.Instance != null)
         {
-            Debug.Log("Correct answer!");
-            quizWindow.SetActive(false);
-
-            if (GameManager.Instance != null)
-            {
-                GameManager.Instance.MarkQuizCompleted(currentQuestionID);
-            }
-
-            if (currentQuestionID == "TrainNoise" && trainReplacer != null)
-            {
-                trainReplacer.ReplaceTrainModel();
-            }
-
-            if (currentTrigger != null)
-            {
-                currentTrigger.OnQuestionAnsweredCorrectly();
-            }
+            GameManager.Instance.MarkQuizCompleted(currentQuestionID);
         }
-        else
+
+        if (currentQuestionID == "TrainNoise" && trainReplacer != null)
         {
-            Debug.Log("Wrong answer, try again!");
+            trainReplacer.ReplaceTrainModel();
+        }
+        else if (currentQuestionID == "Flooding" && floodingReplacer != null)
+        {
+            floodingReplacer.ReplaceFloodingEnvironment();
+        }
+
+        if (currentTrigger != null)
+        {
+            currentTrigger.OnQuestionAnsweredCorrectly();
         }
     }
+    else
+    {
+        Debug.Log("Wrong answer, try again!");
+    }
+}
 }
