@@ -1,17 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\",
+  "WorkspaceRootPath": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\git_clone\\biomimicry_game-\\assets\\scripts\\scintillement_reflet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\clone\\biomimicry_game-\\assets\\scripts\\wagonfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wagonfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\clone\\biomimicry_game-\\assets\\scripts\\trainreplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\trainreplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\TrainFollowPath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TrainFollowPath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\clone\\biomimicry_game-\\assets\\scripts\\scintillement_reflet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scintillement_reflet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\git_clone\\biomimicry_game-\\assets\\scripts\\chaleur_batiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\clone\\biomimicry_game-\\assets\\scripts\\chaleur_batiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chaleur_batiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\git_clone\\biomimicry_game-\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\jeys1\\onedrive\\documents\\clone\\biomimicry_game-\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,10 +39,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WagonFollower.cs",
+              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\WagonFollower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WagonFollower.cs",
+              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\WagonFollower.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WagonFollower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T07:21:37.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrainReplacer.cs",
+              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\TrainReplacer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TrainReplacer.cs",
+              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\TrainReplacer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TrainReplacer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T07:21:33.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Scintillement_reflet.cs",
-              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\Assets\\Scripts\\Scintillement_reflet.cs",
+              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\Scintillement_reflet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scintillement_reflet.cs",
-              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\Assets\\Scripts\\Scintillement_reflet.cs",
+              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\Scintillement_reflet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Scintillement_reflet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,28 +77,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Chaleur_batiment.cs",
-              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\Assets\\Scripts\\Chaleur_batiment.cs",
+              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\Chaleur_batiment.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Chaleur_batiment.cs",
-              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\Assets\\Scripts\\Chaleur_batiment.cs",
+              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\Chaleur_batiment.cs",
               "RelativeToolTip": "Assets\\Scripts\\Chaleur_batiment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T09:50:19.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-11T09:50:19.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
+              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\MenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T21:48:02.046Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MenuManager.cs",
-              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\Assets\\Scripts\\MenuManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
-              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\git_clone\\biomimicry_game-\\Assets\\Scripts\\MenuManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Title": "TrainFollowPath.cs",
+              "DocumentMoniker": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\TrainFollowPath.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TrainFollowPath.cs",
+              "ToolTip": "C:\\Users\\Jeys1\\OneDrive\\Documents\\clone\\biomimicry_game-\\Assets\\Scripts\\TrainFollowPath.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TrainFollowPath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T21:48:02.046Z",
+              "WhenOpened": "2026-11-13T07:17:02.795Z",
               "EditorCaption": ""
             }
           ]
