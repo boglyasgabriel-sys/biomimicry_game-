@@ -68417,9 +68417,9 @@ MonoBehaviour:
     quizBackgroundImage: {fileID: -5293632878644284700, guid: da7383754b45e3b4ea481642f517ce22, type: 3}
     solutionImage: {fileID: -643713263571764527, guid: f26d9008333d271498f23b89eb20f83e, type: 3}
   - id: TrainNoise
-    contextImage: {fileID: -4021141324038944957, guid: d5ad8178af516ea4eae4148024686dcd, type: 3}
-    quizBackgroundImage: {fileID: -5293632878644284700, guid: da7383754b45e3b4ea481642f517ce22, type: 3}
-    solutionImage: {fileID: -643713263571764527, guid: f26d9008333d271498f23b89eb20f83e, type: 3}
+    contextImage: {fileID: 4700194148948162899, guid: 843c93075668ed94182508e71a062b19, type: 3}
+    quizBackgroundImage: {fileID: -107985334749762032, guid: 7e6a91dfd9982544fbf7506c4e11ff62, type: 3}
+    solutionImage: {fileID: 5640559992437713645, guid: 06a8fb88fea48f047a61c8a24a89d3b8, type: 3}
 --- !u!114 &601300496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90449,11 +90449,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.077265315, y: 0.6781309, z: -0.07204091, w: 0.72730917}
   m_LocalPosition: {x: -82.7, y: 17.1, z: 0.7}
-  m_LocalScale: {x: 2.4095004, y: 2.6346, z: 1}
+  m_LocalScale: {x: 2.4095006, y: 2.6346, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1080954484}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 879404446}
   m_LocalEulerAnglesHint: {x: 12.128, y: 85.992, z: 0}
 --- !u!1001 &846032478
 PrefabInstance:
@@ -94579,6 +94579,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5368272237625243597, guid: a6bfd839e57bb4b0fa168095dab70514, type: 3}
   m_PrefabInstance: {fileID: 879213099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &879404445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879404446}
+  m_Layer: 0
+  m_Name: TrainNoise
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &879404446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879404445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 845960206}
+  m_Father: {fileID: 1220175240}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &879898389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127955,6 +127987,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1830487360}
+  - {fileID: 879404446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1221546503
@@ -169339,7 +169372,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -259.58322, y: 0, z: -245.4755, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -227906,4 +227939,3 @@ SceneRoots:
   - {fileID: 1307306188}
   - {fileID: 56786150}
   - {fileID: 393366153}
-  - {fileID: 845960206}
